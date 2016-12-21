@@ -5,7 +5,7 @@ import (
 )
 
 type UsrController struct {
-	beego.Controller
+    BaseController	
 }
 
 func (c *UsrController) Post() {

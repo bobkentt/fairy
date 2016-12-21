@@ -5,7 +5,7 @@ import (
 )
 
 type MarginController struct {
-	beego.Controller
+    BaseController	
 }
 
 func (c *MarginController) Recharge() {

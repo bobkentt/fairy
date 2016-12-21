@@ -5,7 +5,7 @@ import (
 )
 
 type CoachController struct {
-	beego.Controller
+    BaseController	
 }
 
 func (c *CoachController) Link() {

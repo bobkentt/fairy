@@ -5,7 +5,7 @@ import (
 )
 
 type HistoryController struct {
-	beego.Controller
+    BaseController	
 }
 
 func (c *HistoryController) GetHistoryList() {

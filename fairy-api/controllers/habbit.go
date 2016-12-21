@@ -5,7 +5,7 @@ import (
 )
 
 type HabitController struct {
-	beego.Controller
+    BaseController	
 }
 
 func (c *HabitController) Addhabbit() {
