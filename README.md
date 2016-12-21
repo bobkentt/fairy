@@ -13,7 +13,7 @@ Fairy is aslo funny.
 
 ## Connect me
 
-    Email: `bobkentt@163.com`
+    Email: bobkentt@163.com
     QQ: 478448281 
 
 ## Documentation
