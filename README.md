@@ -1,14 +1,20 @@
-# All
-Welcome to the fairy wiki!
+## fairy
+Fairy is a weixin's little program which can help to get rid of the bad habit and fairy help to subvert oneself.
 
-fairy is a weixin's little program.
+Fairy is aslo funny.
 
-fairy help to get rid of the bad habit.
+## Quick Start
+######Download and install
 
-fairy help to subvert oneself.
+    go get github.com/bobkentt/fairy
 
-fairy help to go beyond oneself.
+## Features
+* RESTful support
+* [English](https://github.com/bobkentt/fairy/wiki)
 
-fairy help to realize the impossible.
 
-fairy help to make dream true.
+## Documentation
+
+
+## LICENSE
+fairy source code is licensed under the Apache Licence, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html).
