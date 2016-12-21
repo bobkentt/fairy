@@ -10,11 +10,14 @@ Fairy is aslo funny.
 
 ## Features
 * RESTful support
-* [English](https://github.com/bobkentt/fairy/wiki)
 
+## Connect me
+
+    Email: `bobkentt@163.com`
+    QQ: 478448281 
 
 ## Documentation
-
+* [English](https://github.com/bobkentt/fairy/wiki)
 
 ## LICENSE
 fairy source code is licensed under the Apache Licence, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html).
