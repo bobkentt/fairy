@@ -1,7 +1,6 @@
 package err 
 
 const (
-    // controal api errno
     ERR_OK                   = 0     //成功
     ERR_NOERROR              = 10000 //成功
     ERR_INTERNAL             = 10001 //系统内部错误
