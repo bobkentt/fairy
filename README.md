@@ -7,7 +7,7 @@ Fairy is aslo funny.
 ######Download and install
 
     go get github.com/bobkentt/fairy
-    fairy/make && fairy/output/fairy-api/fairy-api
+    fairy/make && ./fairy-run 
 
 ## Features
 * RESTful support
