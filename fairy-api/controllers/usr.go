@@ -6,3 +6,9 @@ type UsrController struct {
 
 func (c *UsrController) Post() {
 }
+
+func (c *UsrController) Cherr() {
+}
+
+func (c *UsrController) Share() {
+}

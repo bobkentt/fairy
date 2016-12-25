@@ -57,6 +57,6 @@ func (this *HabitController) Post() {
         this.errResponse(config.ERR_INVALID_PARAMS, "invalid habit type", 400, nil)
         return
     }
-
+    log.Warn("post habit request: (%s)", pname)
     this.okResponse(0, nil)
 }

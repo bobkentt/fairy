@@ -4,5 +4,5 @@ type ResourceController struct {
     BaseController	
 }
 
-func (c *ResourceController) Post() {
+func (c *ResourceController) UploadImg() {
 }

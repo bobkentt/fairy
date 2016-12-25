@@ -12,7 +12,7 @@ func init() {
     beego.Router("/api/v1/usr/share", &controllers.UsrController{}, "post:Share")
 
     // habit
-    beego.Router("/api/v1/habit", &controllers.HabitController{}, "post:Addhabit")
+    beego.Router("/api/v1/habit", &controllers.HabitController{}, "post:Post")
 
     // coach
     beego.Router("/api/v1/coach/link", &controllers.CoachController{}, "post:Link")
