@@ -27,3 +27,13 @@ type ApiResponse struct {
 	ErrMsg string      `json:"errmsg,omitempty"`
 	Data   interface{} `json:"data,omitempty"`
 }
+
+type APIConfig struct {
+    Domain string `json:"domain"`
+    Addr   string `json:"addr"`
+}
+
+type ConfigStruct struct {
+    API       APIConfig     `json:"api"`
+}
+

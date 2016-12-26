@@ -1,3 +1,4 @@
+make
 cmd="output/fairy-api/fairy-api"
 echo $cmd
 $cmd

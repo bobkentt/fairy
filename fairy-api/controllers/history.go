@@ -8,7 +8,7 @@ type HistoryController struct {
     BaseController	
 }
 
-func (c *HistoryController) GetHistoryList() {
+func (c *HistoryController) Get() {
     fmt.Printf("Call GetHistoryList\n")
     return
 }

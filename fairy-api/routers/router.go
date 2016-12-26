@@ -23,7 +23,7 @@ func init() {
     beego.Router("/api/v1/margin/refund", &controllers.MarginController{}, "post:Refund")
 
     // history
-    beego.Router("/api/v1/history/list", &controllers.HistoryController{}, "get:GetHistoryList")
+    beego.Router("/api/v1/history", &controllers.HistoryController{}, "get:Get")
     beego.Router("/api/v1/history/item", &controllers.HistoryController{}, "get:GetHistoryItem")
 
     // resource
