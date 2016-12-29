@@ -1,0 +1,2 @@
+<!--logs.wxml-->
+<view> {{ret.data}} </view>

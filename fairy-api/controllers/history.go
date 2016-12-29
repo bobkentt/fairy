@@ -8,10 +8,11 @@ type HistoryController struct {
     BaseController	
 }
 
-func (c *HistoryController) Get() {
+func (this *HistoryController) Get() {
     fmt.Printf("Call GetHistoryList\n")
+    this.okResponse(0, "你好，AAA-李阳\n")
     return
 }
 
-func (c *HistoryController) GetHistoryItem() {
+func (this *HistoryController) GetHistoryItem() {
 }
