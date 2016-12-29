@@ -9,6 +9,9 @@ func init() {
     // bless
     beego.Router("/api/v1/bless", &controllers.BlessController{}, "get:Get")    
 
+    // menu
+    beego.Router("/api/v1/metu/list", &controllers.BlessController{}, "get:GetMetuList")
+
     // usr
     beego.Router("/api/v1/usr", &controllers.UsrController{}, "post:Post")
     beego.Router("/api/v1/usr/cheer", &controllers.UsrController{}, "post:Cherr")

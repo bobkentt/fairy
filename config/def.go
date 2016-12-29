@@ -33,7 +33,31 @@ type APIConfig struct {
     Addr   string `json:"addr"`
 }
 
-type ConfigStruct struct {
-    API       APIConfig     `json:"api"`
+type DBConfig struct {
+    Usr      string `json:"domain"`
+    Passwd   string `json:"addr"`
+    MaxIdle  uint32 `jons:"max_idle"`
+    MaxConn  uint32 `jons:"max_conn"`
 }
 
+type ConfigStruct struct {
+    Dbkeys      DBConfig      `json:"dbkeys"`
+    //API       APIConfig     `json:"api"`
+}
+
+var (
+    Config ConfigStruct
+)
+
+func LoadConfig(filename string) error {
+    r, err := os.Open(filename)
+    if err != nil {
+        return err
+    }
+    decoder := json.NewDecoder(r)
+    err = decoder.Decode(&Config)
+    if err != nil {
+        return err
+    }
+    return nil
+}
