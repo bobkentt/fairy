@@ -1,2 +1,4 @@
 *.swp
+*.swo
 output/
+fairy-api/conf/conf.json

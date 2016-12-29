@@ -33,16 +33,17 @@ type APIConfig struct {
     Addr   string `json:"addr"`
 }
 
-type DBConfig struct {
-    Usr      string `json:"domain"`
-    Passwd   string `json:"addr"`
+type MysqlConfig struct {
+    Server   string `json:"server"`
+    Usr      string `json:"usr"`
+    Passwd   string `json:"pass"`
     MaxIdle  uint32 `jons:"max_idle"`
     MaxConn  uint32 `jons:"max_conn"`
 }
 
 type ConfigStruct struct {
-    Dbkeys      DBConfig      `json:"dbkeys"`
-    //API       APIConfig     `json:"api"`
+    API       APIConfig     `json:"api"`
+    Mysql     MysqlConfig   `json:"mysql"`
 }
 
 var (
