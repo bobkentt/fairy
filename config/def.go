@@ -1,5 +1,10 @@
 package config
 
+import (
+    "encoding/json"
+    "os"
+)
+
 const (
 	ERR_OK             = 0     //成功
 	ERR_NOERROR        = 10000 //成功

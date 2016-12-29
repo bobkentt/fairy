@@ -1,7 +1,9 @@
 package main
 
 import (
+    "flag"
     "fmt"
+    "os"
 
 	"github.com/astaxie/beego"
 
@@ -15,15 +17,14 @@ func main() {
     flag.Parse()
  
     // config load
-    err := conf.LoadConfig(*configFile)
+    err := config.LoadConfig(*configFile)
     if err != nil {
         fmt.Printf("LoadConfig (%s) failed: (%s)\n", *configFile, err)
         os.Exit(1)
     }
+    //fmt.Printf("LoadConfig (%s) success: (%v)\n", *configFile, config.Config)
 
     // server run
-    go func() {
-	    beego.Run()
-    }()
+	beego.Run()
 }
 

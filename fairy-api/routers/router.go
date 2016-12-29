@@ -10,7 +10,7 @@ func init() {
     beego.Router("/api/v1/bless", &controllers.BlessController{}, "get:Get")    
 
     // menu
-    beego.Router("/api/v1/metu/list", &controllers.BlessController{}, "get:GetMetuList")
+    beego.Router("/api/v1/menu/list", &controllers.MenuController{}, "get:GetMenuList")
 
     // usr
     beego.Router("/api/v1/usr", &controllers.UsrController{}, "post:Post")
