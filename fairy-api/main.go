@@ -25,7 +25,7 @@ func main() {
     }
     //fmt.Printf("LoadConfig (%s) success: (%v)\n", *configFile, config.Config)
 
-    storage.NewInstance()
+    storage.NewInstance(&config.Config.Mysql)
 
     // server run
 	beego.Run()
