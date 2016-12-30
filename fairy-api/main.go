@@ -7,8 +7,9 @@ import (
 
 	"github.com/astaxie/beego"
 
-	_ "fairy/fairy-api/routers"
     "fairy/config"
+	_ "fairy/fairy-api/routers"
+    "fairy/storage"
 )
 
 func main() {
@@ -23,6 +24,8 @@ func main() {
         os.Exit(1)
     }
     //fmt.Printf("LoadConfig (%s) success: (%v)\n", *configFile, config.Config)
+
+    storage.NewInstance()
 
     // server run
 	beego.Run()
