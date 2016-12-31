@@ -39,6 +39,7 @@ type APIConfig struct {
 }
 
 type MysqlConfig struct {
+    Name     string `json:"name"`
     Server   string `json:"server"`
     Usr      string `json:"usr"`
     Passwd   string `json:"pass"`
