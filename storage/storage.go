@@ -25,10 +25,10 @@ func NewInstance(cfg *config.MysqlConfig) {
     orm.RegisterDataBase("default", "mysql", link, 30, 30)
 }
 
-func GetProduct(product_id int64) (int64, []Product, error) {
+func GetProductList(merchant_id int64) (int64, []Product, error) {
     var pts []Product
     o := orm.NewOrm()
-    num, err := o.Raw("SELECT product_id, product_name, product_type FROM v1_product WHERE product_id = ?", product_id).QueryRows(&pts)
+    num, err := o.Raw("SELECT product_id, product_name, product_type FROM v1_product WHERE merchant_id = ?", merchant_id).QueryRows(&pts)
     if err != nil {
         log.Warn("GetProduct failed err = %s, product_id = %d", err, product_id)
         return 0, pts, err

@@ -23,8 +23,12 @@ func (this *MenuController) GetMenuList() {
     if err != nil {
         limit = 20
     }
+    merchant_id, err := this.GetInt("merchant_id")
+    if err != nil {
+        this.errResponse(config.ERR_INVALID_PARAMS, "invaild request merchant_id", 400, nil)    
+    }
     
-    _, produts, err := storage.GetProduct()
+    _, products, err := storage.GetProductList(merchant_id)
     if err != nil {
         this.errResponse(config.ERR_INTERNAL, err.Error(), 500, nil)    
     }
