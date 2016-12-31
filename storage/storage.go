@@ -2,8 +2,10 @@ package storage
 
 import (
     "fmt"
+
     "github.com/astaxie/beego/orm"
     _ "github.com/go-sql-driver/mysql"
+    log "code.google.com/p/log4go"
 
     "fairy/config"
 )
@@ -23,12 +25,13 @@ func NewInstance(cfg *config.MysqlConfig) {
     orm.RegisterDataBase("default", "mysql", link, 30, 30)
 }
 
-func GetProduct() (int64, []Product) {
-    o := orm.NewOrm()
+func GetProduct(product_id int64) (int64, []Product, error) {
     var pts []Product
-    num, err := o.Raw("SELECT product_id, product_name, product_type FROM v1_product WHERE product_id = ?", 1).QueryRows(&pts)
+    o := orm.NewOrm()
+    num, err := o.Raw("SELECT product_id, product_name, product_type FROM v1_product WHERE product_id = ?", product_id).QueryRows(&pts)
     if err != nil {
-        fmt.Printf("getProduct err : %s", err)
+        log.Warn("GetProduct failed err = %s, product_id = %d", err, product_id)
+        return 0, pts, err
     }
-    return num, pts
+    return num, pts, nil
 }
