@@ -28,6 +28,6 @@ func (this *ProductController) Get() {
     if err != nil {
         this.errResponse(config.ERR_INTERNAL, err.Error(), 500, nil)    
     }
-    this.okResponse(0, products)
+    this.okResponse(0, product)
 }
 
