@@ -1,14 +1,14 @@
 package controllers
 
 import (
-   "fmt" 
+   "fmt"
 
    "fairy/storage"
    "fairy/config"
 )
 
 type MenuController struct {
-    BaseController	
+    BaseController
 }
 
 func (this *MenuController) GetMenuList() {
@@ -25,12 +25,12 @@ func (this *MenuController) GetMenuList() {
     }
     merchant_id, err := this.GetInt("merchant_id")
     if err != nil {
-        this.errResponse(config.ERR_INVALID_PARAMS, "invaild request merchant_id", 400, nil)    
+        this.errResponse(config.ERR_INVALID_PARAMS, "invaild request merchant_id", 400, nil)
     }
 
     _, products, err := storage.GetProductList(merchant_id)
     if err != nil {
-        this.errResponse(config.ERR_INTERNAL, err.Error(), 500, nil)    
+        this.errResponse(config.ERR_INTERNAL, err.Error(), 500, nil)
     }
     this.okResponse(0, products)
 }

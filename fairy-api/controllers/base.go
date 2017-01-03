@@ -15,6 +15,10 @@ type BaseController struct {
     beego.Controller
 }
 
+func GetUsrId() (int, error) {
+    return 0, nil
+}
+
 func (this *BaseController) errResponse(errno int, errmsg string, httpcode int, data interface{}) {
     resp := Response{
         ErrNo:  errno,

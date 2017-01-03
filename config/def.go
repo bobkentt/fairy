@@ -22,6 +22,13 @@ const (
 	ERR_OTHER          = 20040 //其它错误
 )
 
+const (
+    STATUS_ONLINE   = 1
+    STATUS_OFFLINE  = 2
+    STATUS_TOSHELVE = 3
+    STATUS_DELETE   = 4
+)
+
 type ApiStatus struct {
 	ErrNo  int    `json:"errno"`
 	ErrMsg string `json:"errmsg,omitempty"`
